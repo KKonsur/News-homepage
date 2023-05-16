@@ -1,0 +1,48 @@
+.articles {
+   grid-area: articles;
+   display: flex;
+   gap: 1.5rem;
+   margin-top: 3rem;
+
+   @media (max-width: 900px) {
+      flex-direction: column;
+      margin-top: 0;
+      gap: 1.5rem;
+   }
+
+   &__article {
+      display: flex;
+      gap: 1rem;
+
+      img {
+         width: clamp(120px, 20%, 200px);
+         object-fit: contain;
+         object-position: center;
+      }
+   }
+   &__article-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__article-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: hsl(233, 8%, 79%);
+   }
+
+   &__article-heading {
+      color: hsl(240, 100%, 5%);
+      font-size: clamp(1rem, 2.5vw, 1rem);
+      transition: 0.2s;
+
+      &:hover {
+         cursor: pointer;
+         color: hsl(5, 85%, 63%);
+      }
+   }
+   &__article-paragraph {
+      line-height: 1.6rem;
+   }
+}
